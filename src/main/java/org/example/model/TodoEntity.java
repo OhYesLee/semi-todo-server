@@ -3,8 +3,10 @@ package org.example.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+@Component
 @Table
 @Data
 @Entity

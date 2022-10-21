@@ -4,17 +4,21 @@ import lombok.AllArgsConstructor;
 import org.example.model.TodoEntity;
 import org.example.model.TodoRequest;
 import org.example.repository.TodoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
 @Service
-@AllArgsConstructor
+//@AllArgsConstructor
 public class TodoService {
-
-    private final TodoRepository todoRepository;
+    @Autowired(required = false)
+    TodoRepository todoRepository;
 
     /**
      * Todo 아이템 추가
